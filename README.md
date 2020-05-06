@@ -1,24 +1,34 @@
-# README
+# Restaurant Listアプリ
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# DB設計
 
-Things you may want to cover:
+## usersテーブル
+|Column|Type|Options|
+|------|----|-------|
+|nickname|staring|null: false, unique: true|
+|email|staring|null: false, unique: true|
+|password|staring|null: false|
+### Associatioin
+- has_many :shops
+- has_many :likes
 
-* Ruby version
+## shopsテーブル
+|Column|Type|Options|
+|------|----|-------|
+|name|staring|null: false|
+|address|staring|null: false|
+|phone_number|integer|null: false, unique: true|
+|price|integer|null: false|
+|body|text|-------| #body:お店に対するコメントなど
+### Association
+- belongs_to :user
+- has_many :likes
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## likesテーブル
+|Column|Type|Options|
+|------|----|-------|
+|user_id|references|null: false, foreign_key: true|
+|shop_id|references|null: false, foreign_key: true|
+### Association
+- belonges_to :user
+- belonges_to :shop
