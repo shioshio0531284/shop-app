@@ -1,4 +1,4 @@
-lock '3.13.0'
+lock '3.14.0'
 set :application, 'shop-app'
 set :repo_url,  'git@github.com:shioshio0531284/shop-app.git'
 set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', 'public/system', 'public/uploads')
