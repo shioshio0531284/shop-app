@@ -1,3 +1,7 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  Rails.application.routes.draw do
+    $date = Time.now.in_time_zone('Tokyo').to_s
+    root "shops#index"
+    resources :shops, only: :index
+  end
 end
