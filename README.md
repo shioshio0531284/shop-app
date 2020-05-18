@@ -15,8 +15,8 @@
 ## shopsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|name|staring|null: false|
-|address|staring|null: false|
+|name|string|null: false|
+|address|string|null: false|
 |phone_number|integer|null: false, unique: true|
 |price|integer|null: false|
 |body|text|-------| #body:お店に対するコメントなど
