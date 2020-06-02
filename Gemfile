@@ -73,8 +73,8 @@ group :development, :test do
   gem 'capistrano3-unicorn'
 end
 
-# 以下は末尾に追記
 gem 'pry-rails'
 gem 'haml-rails'
 gem 'erb2haml'
 gem 'devise'
+gem 'font-awesome-sass'

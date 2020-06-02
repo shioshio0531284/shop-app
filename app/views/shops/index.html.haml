@@ -1,3 +1,46 @@
-下記の時間にデプロイが成功しました
-%br
-= $date
+= render "layouts/header"
+.top-content
+  .top-comtent__text
+    .top-content__text__main
+      あなたのお気に入りの
+      %br お店をシェアしよう
+    .top-content__text__bottom
+      xxxxxx
+  .top-content__image
+.top-main
+  %h2.top-main__title
+    人気のジャンル
+  .top-main__title__tags
+    %ul.top-main__title__tags__area
+      %li.top-main__title__tags__area__a
+        = link_to "#", class:"top-main__title__tags__area__a__parts" do
+          お寿司
+        = link_to "#", class:"top-main__title__tags__area__a__parts" do
+          日本食
+        = link_to "#", class:"top-main__title__tags__area__a__parts" do
+          そば（蕎麦）
+        = link_to "#", class:"top-main__title__tags__area__a__parts" do
+          焼き鳥
+  .top-main__contents
+    .top-main__contents__item
+      .top-main__contents__item__top
+        %h3.top-main__contents__item__top__left
+          お寿司
+    
+          = link_to "#", class:"top-main__contents__item__top__left__text-see-more" do
+            もっと見る
+            %i.fas.fa-chevron-right.top-main__contents__item__top__left__text-see-more__arrow-icon
+      .block_area
+        .block_area__list
+          = image_tag scr="material/3346154_m.jpg", class: "list__image"
+          .details
+            %h3.name
+              〇〇寿司
+              .details__info
+                %ul
+                  %li 銀座三丁目
+                  %li
+                    =icon('fas','fas fa-star')
+                    5
+
+= render "layouts/footer"
